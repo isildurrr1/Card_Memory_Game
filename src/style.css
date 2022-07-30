@@ -1,11 +1,11 @@
-div {
-    margin: 0;
-    padding: 0;
+body {
+    background: #FFFFE0;
 }
 
-h1 {
+.win {
     font-family: 'Permanent Marker', cursive;
-    margin-left: 30px;
+    color: #DC143C;
+    margin-left: 38px;
     text-align: center;
     pointer-events: none;
 }
@@ -50,7 +50,7 @@ h1 {
 }
 
 .front {
-    background-image: url("../image/card1.jpg");
+    background-image: url("../image/card.jpg");
 }
 
 .back {
@@ -72,8 +72,38 @@ h1 {
     transform: scale(0.97);
     transition: transform .2s;
 }
-.lol {
+.imgCard {
     width: 90px;
     height: 90px;
     border-radius: 10px;
 }
+
+.button {
+    margin-left: 38px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #E9967A;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #FA8072}
+
+.button:active {
+    background-color: #FA8072;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.card.flip {
+    height: 0px;
+    overflow: hidden;
+}
+
