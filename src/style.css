@@ -1,0 +1,79 @@
+div {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    margin-left: 30px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.game {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    width: 420px;
+    height: 420px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+    perspective: 1000px;
+}
+
+.cards {
+    padding: 20px;
+    display: grid;
+    grid-template: repeat(4,1fr) / repeat(4,1fr);
+    grid-gap: 6px;
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.front {
+    background-image: url("../image/card1.jpg");
+}
+
+.back {
+    background: wheat;
+    transform: rotateY(-180deg);
+}
+
+.card.is-flip .front {transform: rotateY(-180deg);}
+.card.is-flip .back {transform: rotateY(-360deg);}
+
+.btn {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 0;
+}
+
+.card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+.lol {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+}
